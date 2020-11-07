@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.android.architecture.app.CustomApplication;
 import com.android.architecture.data.DataManager;
+import com.android.architecture.data.SharedPrefsHelper;
 import com.android.architecture.di.component.ActivityComponent;
 import com.android.architecture.di.component.DaggerActivityComponent;
 import com.android.architecture.di.module.ActivityModule;
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Inject
     DataManager mDataManager;
+
+    @Inject
+    SharedPrefsHelper mSharedPrefsHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         activityComponent.inject(this);
 
-        Log.i(TAG, "mDataManager != null   "+(mDataManager != null));
+        Log.i(TAG, "mDataManager != null :"+(mDataManager != null) + "  mSharedPrefsHelper!=null :"+(mSharedPrefsHelper!=null));
     }
 }

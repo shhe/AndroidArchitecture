@@ -11,10 +11,20 @@ import javax.inject.Singleton;
 @Singleton
 public class DataManager {
 
+    public static final String KEY_USER_ID = "userId";
+
     private SharedPrefsHelper mPrefsHelper;
 
     @Inject
     public DataManager(SharedPrefsHelper prefsHelper) {
         this.mPrefsHelper = prefsHelper;
+    }
+
+    public void saveUserID(String userID) {
+        mPrefsHelper.put(KEY_USER_ID, userID);
+    }
+
+    public String getUserId() {
+        return mPrefsHelper.get(KEY_USER_ID, "");
     }
 }
