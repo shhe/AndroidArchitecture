@@ -1,10 +1,11 @@
-package com.android.architecture;
+package com.android.architecture.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 
+import com.android.architecture.R;
 import com.android.architecture.app.CustomApplication;
 import com.android.architecture.data.DataManager;
 import com.android.architecture.data.SharedPrefsHelper;

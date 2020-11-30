@@ -1,6 +1,6 @@
 package com.android.architecture.di.component;
 
-import com.android.architecture.MainActivity;
+import com.android.architecture.activity.MainActivity;
 import com.android.architecture.di.PerActivity;
 import com.android.architecture.di.module.ActivityModule;
 
